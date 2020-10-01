@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Musiikkisoitin</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid bg-info">
+        <div class="container">
+
+            <h1>Bearwaves</h1>
+
+            <div class="image">
+                <img src="https://w0286994blog.files.wordpress.com/2016/04/bear.jpg?w=676" />
+            </div>
+
+            <div class="player">
+                <div id="songTitle" class="song-title">Tähän kappaleen nimi</div>
+                <input id="songSlider" type="range" min="0" step="1" onchange="seekSong()" />
+                <div>
+                    <div id="currentTime">00:00:00</div>
+                    <div id="left">00:00:00</div>
+                    <div id="duration">00:00:00</div>
+                </div>
+
+                <div class="controllers">
+                    <img src="https://opengameart.org/sites/default/files/fast%20backward_1.png" width="40px" onclick="previous();" />
+                    <img src="https://opengameart.org/sites/default/files/play_1.png" width="50px" onclick="playOrPause(this);" />
+                    <img src="https://opengameart.org/sites/default/files/stop_red_1.png" width="50px" onclick="stop();" />
+                    <img src="https://opengameart.org/sites/default/files/fast%20forward_1.png" width="40px" onclick="next();" />
+                    <img src="https://opengameart.org/sites/default/files/mute.png" width="20px" />
+                    <input id="volumeSlider" type="range" min="0" max="1" step="0.01" onchange="adjustVolume()" />
+                    <img src="https://opengameart.org/sites/default/files/unmute.png" width="20px" />
+                </div>
+
+                <h4>Soittolista</h4>
+
+                <ul id="playlist">
+                    <li onclick="playSelected('epic.mp3')">Epic</li>
+                    <li onclick="playSelected('newdawn.mp3')">New Dawn</li>
+                    <li onclick="playSelected('highoctane.mp3')">High Octane</li>
+                </ul>
+            </div>
+
+            <a href="https://www.bensound.com" target="_blank">Music: bensound</a>
+            
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="player.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
